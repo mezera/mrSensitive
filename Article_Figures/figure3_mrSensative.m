@@ -1,14 +1,15 @@
 %% figure 3
 clear
-disp('Figure 3')
+disp('Figure 3 ')
+disp('It may take about 5-10 to run this fits.')
 
 
-%  hougenus phantom M0 data fitted with polynomials.
+%  homogeneous phantom M0 data fitted with polynomials.
 % Code associated with Mezer, et. al. 2016, HBM
 %
-% AM/BW Mezer Lab & Vistaosft Team, 2013
+% % AM/BW  Mezer Lab Wandell Lab & Vistaosft Team, 2013
 
-
+% 
 %%  Make sure mrSensitive is on the path
 addpath(genpath(fullfile(mrSensitiveRootPath)));
 
@@ -131,7 +132,7 @@ M0(90, 60,45)=0;% 10
 showMontage(rot90(M0(:,:,45)));
 axis square;axis off; colormap hot;colorbar off
 
-%% gloobal fit
+%% Gloobal fit
 Mask= Mask & M0>0;
 V=zeros([size(M0) 10]);
 for ii=1:10

@@ -1,15 +1,15 @@
 %% Figure 5
 %
-% Illustrate howPD and coil sensativity are joined to make the M0  images %
+% 
 % Code associated with Mezer, et. al. 2016, HBM
 % 
 %
-% % AM/BW Mezer Lab & Vistaosft Team, 2013
+% % AM/BW  Mezer Lab Wandell Lab & Vistaosft Team, 2015
 
-%In this figure we plot the results of different models to estimate PD and Gain on a whole brain.
-%To run the different model fit use the script saved in
-% fullfile(mrSensitiveRootPath,'MethodsComparision')
-% Note that since the methods recruiter additional code ( that is not our to share), here we use the saved outcome.
+% In this figure we plot the results of different models to estimate PD and Gain on a whole brain.
+% To run the different model fit use the script saved in
+% fullfile(mrSensitiveRootPath,'MethodsComparision'). MultiMethodScript_figure5.m
+% Note that since the methods recruiter additional code ( of other authors), here we use the saved outcome.
 
 
 %%
@@ -34,9 +34,9 @@ colorbar off; axis off; title ('SOS M0')
 
 
 %% sub plot c
-% We show here the figures form the article with SOS coil summation and for PD free of true smooth PD in space .
-% to plot to Median change to median when ever it say SOS and 
-% to change to smooth PD in space change 'new' whenever we use'old'
+% We show here the figures form the article with SOS coil summation. The simulated PD is  free of true smooth values in space .
+% to plot to Median summation change to median when ever it say SOS and 
+% to change to smooth PD in space change 'new' whenever we use 'old'
 
 PDfile=fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','SimValues','PD.nii.gz');
 BMfile=(fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','InPut','mask.nii.gz'));
@@ -64,8 +64,8 @@ in=PD_fit.data;
 in=in.*median(PD(BM)./in(BM));
 %compare to the simulation
 
-CV = (calccod(PD(BM),in(BM))/100)
-MedErr=median(abs(in(BM)-PD(BM))./PD(BM))
+CV = (calccod(PD(BM),in(BM))/100);
+MedErr=median(abs(in(BM)-PD(BM))./PD(BM));
 
 nBins = 155;
 [n,x,y] = mrQ_hist2d(PD(BM),in(BM),nBins);
@@ -87,7 +87,7 @@ grid on
 Errmap=100*(in(:,:,:)-PD(:,:,:))./PD(:,:,:);
 Errmap(~BM)=nan;
 showMontage(Errmap(:,:,45));colormap hot
-caxis([-40 40]);axis off; title(FitName(ii))
+caxis([-40 40]);axis off; title([FitName(ii) 'NAPE ' MedErr])
 end
 
 

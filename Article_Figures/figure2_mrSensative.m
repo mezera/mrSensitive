@@ -2,13 +2,13 @@
 clear
 disp('Figure 2')
 
-% PD multiple by hougenus phantom data M0.
+% Making a simulated data by multiple PD and homogeneous phantom data M0.
 % Code associated with Mezer, et. al. 2016, HBM
 %
-% AM/BW Mezer Lab & Vistaosft Team, 2013
+% % AM/BW  Mezer Lab Wandell Lab & Vistaosft Team, 2013
 
 
-
+% Also see Sim_M0_Noise.m in: fullfile(mrSensitiveRootPath,'MethodsComparision')
 %%  Make sure mrSensitive is on the path
 addpath(genpath(fullfile(mrSensitiveRootPath)));
 %%
@@ -27,10 +27,10 @@ colorbar off; axis off; title ('PD')
 
 
 showMontage(M0CoilSensativity.data(:,:,45,1));
-colorbar off; axis of; title ('Sensitivity')
+colorbar off; axis off; title ('Sensitivity')
 
 showMontage(M0Simulated.data(:,:,45,1));
-colorbar off; axis of; title ('M0')
+colorbar off; axis off; title ('M0')
 
 
 

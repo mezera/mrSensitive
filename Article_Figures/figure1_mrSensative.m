@@ -1,10 +1,10 @@
 %% Figure 1
 %
-% Illustrate howPD and coil sensativity are joined to make the M0  images %
+% Illustrate how PD and coil sensitivity are joined to make the M0  images %
 % Code associated with Mezer, et. al. 2016, HBM
 % 
 %
-% % AM/BW Mezer Lab & Vistaosft Team, 2013
+% % AM/BW  Mezer Lab Wandell Lab & Vistaosft Team, 2013
 
 
 %% 
