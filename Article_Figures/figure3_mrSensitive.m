@@ -1,7 +1,7 @@
 %% figure 3
 clear
 disp('Figure 3 ')
-disp('It may take about 5-10 to run this fits.')
+disp('It may take about 5-10 minutes to run these fit.')
 
 
 %  homogeneous phantom M0 data fitted with polynomials.

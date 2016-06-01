@@ -21,7 +21,7 @@ disp('Figure 7')
 % AM/BW Vistaosft Team, 2013
 
 % Running the solution  for PD from raw image will take many hours.
-% For the analysis of PsedoT1 and Uincort see details in figure5_mrSensative.m.
+% For the analysis of PsedoT1 and Uincort see details in figure5_mrSensitive.m.
 %Note that since these methods recruiter additional code ( of other authors), here we use the saved outcome.
 % For running the correlation method use  https://github.com/mezera/mrQ VS.1
 % For running the Local-psedoT1 approach use https://github.com/mezera/mrQ VS. 2
@@ -77,7 +77,6 @@ WF1=readFileNifti(fullfile(Maps_path,'32',MethodName{ii},'PDfit.nii.gz'));
 WF2=readFileNifti(fullfile(Maps_path,'8',MethodName{ii},'PDfit.nii.gz'));
 
 
-
 %%
 
 
@@ -89,7 +88,8 @@ WF2.data=WF2.data*median(WF1.data(BM1)./WF2.data(BM1));
 CV(ii) = (calccod(WF1.data(BM1),WF2.data(BM1))/100);
 
 
-%% Plot a  2D histogram of the error
+%% Panel 7B Plot a  2D histogram of the error
+ 
 
 nBins = 155;
 [n,x,y] = mrQ_hist2d(WF1.data(BM1),WF2.data(BM1),nBins);
@@ -108,10 +108,11 @@ set(gca,'FontSize',16)
 title( [ MethodName{ii} ' R^2= ' num2str(CV(ii)) ])
 grid on
 
+if ii==5; text(0.62,0.92,'Not shown in the article ');end
 
 
+%% Panel 7c Error maps  
 
-%% Error maps
 Err=(WF1.data-WF2.data)./((WF2.data+WF2.data)./2);
 Err(isnan(Err))=0;Err(isinf(Err))=0;
 Err(~BM)=-100;
@@ -120,9 +121,13 @@ imagesc(Err(:,:,90)*100); colormap hot; caxis([-10 10]); axis off
 MAPE(ii)=mean(abs(Err(BM))) ;
 title([MethodName{ii} ' Precent error= ' num2str(MAPE(ii)) ])
  
+if ii==5; text(10,200,'Not shown in the article ');end
 
 end
 
 
-
-
+%% Panel 7A PD maps
+showMontage(WF1.data(:,:,90,1));
+colorbar off; axis off; title ('PD 8ch'); caxis([0 1.2])
+showMontage(WF2.data(:,:,90,1));
+colorbar off; axis off; title ('PD 32ch');caxis([0 1.2])

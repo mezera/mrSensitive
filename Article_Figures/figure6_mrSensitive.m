@@ -80,7 +80,7 @@ end
 % to plot to Median change to 'Median' where is say 'SOS'  
 % to plot to the smooth PD change to 'new' here is say 'old'
 
-PD_fit=readFileNifti('/home/code/aviv/git/mrSensitive/ExampleData/PhantomBrain/old/M0Files/LocalT1/SOS/PDfit.nii.gz');
+PD_fit=readFileNifti(fullfile(mrSensitiveRootPath,'/ExampleData/PhantomBrain/old/M0Files/LocalT1/SOS/PDfit.nii.gz'));
     BM=readFileNifti(BMfile); BM=logical(BM.data);
 
 
@@ -104,14 +104,14 @@ identityLine(gca);
 axis square xy; axis image;
 xlim([0.5 1.1]); ylim([0.5 1.1])
 ylabel('PD  sim' ,'FontSize',16);
-xlabel(['PD  fit local-T1' ],'FontSize',16);
+xlabel(['PD  fit local-T1 -  not shown in the article' ],'FontSize',16);
 set(gca,'FontSize',16)
 grid on
-title( [' R^2= ' num2str(CV)])
+title( [FitName(ii) ' R^2= ' num2str(CV) ])
 
 
 Errmap=100*(in(:,:,:)-PD(:,:,:))./PD(:,:,:);
 Errmap(~BM)=nan;
 showMontage(Errmap(:,:,45));colormap hot
-caxis([-40 40]);axis off; title([ FitName(ii) 'NAPE ' num2str(MedErr)] )
+caxis([-40 40]);axis off; title([ FitName(ii) 'NAPE ' num2str(MedErr) ' not shown in the article'] )
 

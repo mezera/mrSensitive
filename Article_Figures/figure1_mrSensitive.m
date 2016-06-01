@@ -94,7 +94,7 @@ for ii=1: length(coils)
     imagesc(Gi(:,:,slice));
     caxis([mn mx]);
     colormap(gray); axis image; axis off;
-    title(sprintf('Sensativity for coil %d\n',ii));
+    title(sprintf('Sensitivity for coil %d\n',ii));
     
     % mrUtilResizeFigure(gcf, 900, 900);
     % mrUtilPrintFigure(['M0_example_slice' num2str(ii) '.eps']);

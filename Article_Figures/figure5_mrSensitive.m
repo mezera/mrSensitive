@@ -87,7 +87,7 @@ grid on
 Errmap=100*(in(:,:,:)-PD(:,:,:))./PD(:,:,:);
 Errmap(~BM)=nan;
 showMontage(Errmap(:,:,45));colormap hot
-caxis([-40 40]);axis off; title([FitName(ii) 'NAPE ' MedErr])
+caxis([-40 40]);axis off; title([FitName(ii) 'MAPE ' MedErr])
 end
 
 
