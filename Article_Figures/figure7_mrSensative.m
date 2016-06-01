@@ -16,7 +16,7 @@ disp('Figure 7')
 % in the two scans
 
 % Raw Data can be found here as nifti:  http://purl.stanford.edu/nn554zr6949.
-
+% In there scan-1 is the 8ch and scan-2 is the 32ch.
 
 % AM/BW Vistaosft Team, 2013
 
