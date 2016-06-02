@@ -71,7 +71,7 @@ title( [' R^2= ' num2str(CV)])
 Errmap=100*(in(:,:,:)-PD(:,:,:))./PD(:,:,:);
 Errmap(~BM)=nan;
 showMontage(Errmap(:,:,45));colormap hot
-caxis([-40 40]);axis off; title([ FitName(ii) 'NAPE ' num2str(MedErr)])
+caxis([-40 40]);axis off; title([ FitName(ii) 'MAPE ' num2str(MedErr)])
 end
 
 
@@ -113,5 +113,5 @@ title( [FitName(ii) ' R^2= ' num2str(CV) ])
 Errmap=100*(in(:,:,:)-PD(:,:,:))./PD(:,:,:);
 Errmap(~BM)=nan;
 showMontage(Errmap(:,:,45));colormap hot
-caxis([-40 40]);axis off; title([ FitName(ii) 'NAPE ' num2str(MedErr) ' not shown in the article'] )
+caxis([-40 40]);axis off; title([ FitName(ii) 'MAPE ' num2str(MedErr) ' not shown in the article'] )
 

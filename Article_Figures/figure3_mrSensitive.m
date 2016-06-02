@@ -131,6 +131,7 @@ M0(90, 60,45)=0;% 10
 %plot
 showMontage(rot90(M0(:,:,45)));
 axis square;axis off; colormap hot;colorbar off
+title('Homogeneous phantom M0 ');
 
 %% Gloobal fit
 Mask= Mask & M0>0;
@@ -150,4 +151,3 @@ grid on
 set(gca,'YTick',[ 5 10 15 20 25 30 ])
     ylabel('Percent error','FontSize',20);
     xlabel('Polynomial order','FontSize',20);
-

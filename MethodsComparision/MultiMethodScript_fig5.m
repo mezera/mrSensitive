@@ -83,14 +83,14 @@ SmoothGain_3D_COIN(M0file,maskfile,outputhPath,smoothKarnel);
 
 % Better result can be achived when the only white matter mask is used.
 
-%% PsedoT1
+%% PseudoT1
 %%. fit only with T1 rule volz 2012 
 % Neuroimage. 2012 Oct 15;63(1):540-52. doi: 10.1016/j.neuroimage.2012.06.076. Epub 2012 Jul 14.
 % Quantitative proton density mapping: correcting the receiver sensitivity bias via pseudo proton densities.
 % Volz S, Nöth U, Jurcoane A, Ziemann U, Hattingen E, Deichmann R.
 %Please contact Professor Ralf Deichmann , Univ. Frankfurt/Main, Germany for the code. 
 
-addpath(**** Path to PsedoT1 Code ****)
+addpath(**** Path to PseudoT1 Code ****)
 
 % Note that the smooth variance PD data run was not successful 
 %%
@@ -183,8 +183,8 @@ PD=PDi;
 PD(~BM)=nan;
 %%
 %the SOS case
-PDfile=fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','M0Files','PsedoT1','PD_SOS.nii');
-Gainfile=fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','M0Files','PsedoT1','Gain_SOS.nii');
+PDfile=fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','M0Files','PseudoT1','PD_SOS.nii');
+Gainfile=fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','M0Files','PseudoT1','Gain_SOS.nii');
 
 
 

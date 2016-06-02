@@ -43,11 +43,11 @@ BMfile=(fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','InPut',
 %%
 
 PD_CoinSoS=fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','M0Files','COIN','GMWMmask','SOS','PDfit.nii.gz');
-PD_PsedoT1SoS=fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','M0Files','PsedoT1','SOS','PDfit.nii.gz');
+PD_pseudoT1SoS=fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','M0Files','PseudoT1','SOS','PDfit.nii.gz');
 PD_unicort=fullfile(mrSensitiveRootPath,'ExampleData','PhantomBrain','old','M0Files','unicort','SOS','PDfit.nii');
 
-PD_fitmap= { PD_unicort PD_CoinSoS   PD_PsedoT1SoS};
-FitName={'UNICORT' 'COIN' 'Psedo T1'};
+PD_fitmap= { PD_unicort PD_CoinSoS   PD_pseudoT1SoS};
+FitName={'UNICORT' 'COIN' 'Pseudo T1'};
 
 
 %%
