@@ -8,7 +8,7 @@ addpath(genpath(fullfile(mrSensitiveRootPath)));
 To add the directories inside to your matlab path.
 
 Please also have mrQ  repository in your matlab path:
-https://github.com/mezera/mrQ
+https://github.com/mezera/mrQ v.2
 
 The code in this repository was developed 
 
