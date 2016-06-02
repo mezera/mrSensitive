@@ -1,5 +1,6 @@
 # mrSensitive
-Code associated with  Mezer, et. al. 2016, HBM.
+Code associated with  :
+Mezer A, Rokem A, Berman S. Hastie T and Wandell BA "Evaluating quantitative proton-density-mapping methods" Human Brain Mapping 2016
 
 To run the functions and scripts inside this repository, please first go to the base directory and evaluate this line:
 
