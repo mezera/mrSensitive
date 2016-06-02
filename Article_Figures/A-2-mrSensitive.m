@@ -1,4 +1,4 @@
-%% figure 4
+%Figure A-2
 clear
 disp('Figure A-2')
 
