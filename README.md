@@ -10,9 +10,12 @@ To add the directories inside to your matlab path.
 Please also have these repositories in your matlab path:
 - mrQ (form the Mezer Lab Wandell Lab)
       https://github.com/mezera/mrQ v.2
-and 
-- KNKUtils (from Kendrick Kay):
+ 
+- KNKUtils (from Kendrick Kay Lab):
      https://github.com/kendrickkay/knkutils
+
+- Vistasoft (form  Wandell Lab)
+- https://github.com/vistalab/vistasoft
 
 The code in this repository was developed by:
 Aviv Mezer & Brian Wandell form the Mezer Lab Wandell Lab & Vistaosft Team, Copyright 2013
